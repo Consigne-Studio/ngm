@@ -1,0 +1,19 @@
+# Diagnostic mensuel de maintenance Angular (offre Consigne DEV-603).
+# À inclure dans .gitlab-ci.yml : include: 'ci/maintenance-angular.gitlab-ci.yml'
+# Puis créer une planification (Build → Pipeline schedules) le 1er du mois avec la variable NGM_MENSUEL=1.
+maintenance-angular:
+  image: node:22
+  variables:
+    NGM: github:consigne/ngm#v1.0.0
+  rules:
+    - if: '$NGM_MENSUEL == "1"'
+    - if: '$CI_PIPELINE_SOURCE == "web"'
+  script:
+    - npm ci --no-audit --no-fund
+    - npx --yes "$NGM" diagnostic --json etat.json --markdown resume.md
+  artifacts:
+    when: always
+    expire_in: 1 year
+    paths:
+      - etat.json
+      - resume.md

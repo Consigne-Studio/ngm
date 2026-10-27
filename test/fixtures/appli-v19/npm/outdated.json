@@ -1,0 +1,182 @@
+{
+  "@angular-devkit/build-angular": {
+    "current": "19.2.27",
+    "wanted": "19.2.27",
+    "latest": "21.2.28",
+    "dependent": "appli-test",
+    "location": "/projets/appli-test/node_modules/@angular-devkit/build-angular",
+    "type": "devDependencies",
+    "homepage": "https://github.com/angular/angular-cli"
+  },
+  "@angular/cdk": {
+    "current": "19.2.19",
+    "wanted": "19.2.19",
+    "latest": "22.2.4",
+    "dependent": "appli-test",
+    "location": "/projets/appli-test/node_modules/@angular/cdk",
+    "type": "dependencies",
+    "homepage": "https://github.com/angular/components#readme"
+  },
+  "@angular/cli": {
+    "current": "19.2.27",
+    "wanted": "19.2.27",
+    "latest": "21.2.28",
+    "dependent": "appli-test",
+    "location": "/projets/appli-test/node_modules/@angular/cli",
+    "type": "devDependencies",
+    "homepage": "https://github.com/angular/angular-cli"
+  },
+  "@angular/common": {
+    "current": "19.2.25",
+    "wanted": "19.2.25",
+    "latest": "21.2.25",
+    "dependent": "appli-test",
+    "location": "/projets/appli-test/node_modules/@angular/common",
+    "type": "dependencies",
+    "homepage": "https://github.com/angular/angular#readme"
+  },
+  "@angular/compiler": {
+    "current": "19.2.25",
+    "wanted": "19.2.25",
+    "latest": "21.2.25",
+    "dependent": "appli-test",
+    "location": "/projets/appli-test/node_modules/@angular/compiler",
+    "type": "dependencies",
+    "homepage": "https://github.com/angular/angular#readme"
+  },
+  "@angular/compiler-cli": {
+    "current": "19.2.25",
+    "wanted": "19.2.25",
+    "latest": "21.2.25",
+    "dependent": "appli-test",
+    "location": "/projets/appli-test/node_modules/@angular/compiler-cli",
+    "type": "devDependencies",
+    "homepage": "https://github.com/angular/angular/tree/main/packages/compiler-cli"
+  },
+  "@angular/core": {
+    "current": "19.2.25",
+    "wanted": "19.2.25",
+    "latest": "21.2.25",
+    "dependent": "appli-test",
+    "location": "/projets/appli-test/node_modules/@angular/core",
+    "type": "dependencies",
+    "homepage": "https://github.com/angular/angular#readme"
+  },
+  "@angular/forms": {
+    "current": "19.2.25",
+    "wanted": "19.2.25",
+    "latest": "21.2.25",
+    "dependent": "appli-test",
+    "location": "/projets/appli-test/node_modules/@angular/forms",
+    "type": "dependencies",
+    "homepage": "https://github.com/angular/angular#readme"
+  },
+  "@angular/material": {
+    "current": "19.2.19",
+    "wanted": "19.2.19",
+    "latest": "22.2.4",
+    "dependent": "appli-test",
+    "location": "/projets/appli-test/node_modules/@angular/material",
+    "type": "dependencies",
+    "homepage": "https://github.com/angular/components#readme"
+  },
+  "@angular/platform-browser": {
+    "current": "19.2.25",
+    "wanted": "19.2.25",
+    "latest": "21.2.25",
+    "dependent": "appli-test",
+    "location": "/projets/appli-test/node_modules/@angular/platform-browser",
+    "type": "dependencies",
+    "homepage": "https://github.com/angular/angular#readme"
+  },
+  "@angular/platform-browser-dynamic": {
+    "current": "19.2.25",
+    "wanted": "19.2.25",
+    "latest": "20.0.7",
+    "dependent": "appli-test",
+    "location": "/projets/appli-test/node_modules/@angular/platform-browser-dynamic",
+    "type": "dependencies",
+    "homepage": "https://github.com/angular/angular#readme"
+  },
+  "@angular/router": {
+    "current": "19.2.25",
+    "wanted": "19.2.25",
+    "latest": "21.2.25",
+    "dependent": "appli-test",
+    "location": "/projets/appli-test/node_modules/@angular/router",
+    "type": "dependencies",
+    "homepage": "https://github.com/angular/angular/tree/main/packages/router"
+  },
+  "@ngrx/store": {
+    "current": "19.2.1",
+    "wanted": "19.2.1",
+    "latest": "22.0.1",
+    "dependent": "appli-test",
+    "location": "/projets/appli-test/node_modules/@ngrx/store",
+    "type": "dependencies",
+    "homepage": "https://github.com/ngrx/platform#readme"
+  },
+  "@types/jasmine": {
+    "current": "5.1.15",
+    "wanted": "5.1.15",
+    "latest": "7.0.0",
+    "dependent": "appli-test",
+    "location": "/projets/appli-test/node_modules/@types/jasmine",
+    "type": "devDependencies",
+    "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/jasmine"
+  },
+  "jasmine-core": {
+    "current": "5.6.0",
+    "wanted": "5.6.0",
+    "latest": "7.0.2",
+    "dependent": "appli-test",
+    "location": "/projets/appli-test/node_modules/jasmine-core",
+    "type": "devDependencies",
+    "homepage": "https://jasmine.github.io"
+  },
+  "karma-jasmine-html-reporter": {
+    "current": "2.1.0",
+    "wanted": "2.1.0",
+    "latest": "2.3.0",
+    "dependent": "appli-test",
+    "location": "/projets/appli-test/node_modules/karma-jasmine-html-reporter",
+    "type": "devDependencies",
+    "homepage": "https://github.com/dfederm/karma-jasmine-html-reporter#readme"
+  },
+  "lodash": {
+    "current": "4.17.15",
+    "wanted": "4.18.1",
+    "latest": "4.18.1",
+    "dependent": "appli-test",
+    "location": "/projets/appli-test/node_modules/lodash",
+    "type": "dependencies",
+    "homepage": "https://lodash.com/"
+  },
+  "primeng": {
+    "current": "19.1.4",
+    "wanted": "19.1.4",
+    "latest": "22.1.4",
+    "dependent": "appli-test",
+    "location": "/projets/appli-test/node_modules/primeng",
+    "type": "dependencies",
+    "homepage": "https://primeng.dev"
+  },
+  "typescript": {
+    "current": "5.7.3",
+    "wanted": "5.7.3",
+    "latest": "7.0.2",
+    "dependent": "appli-test",
+    "location": "/projets/appli-test/node_modules/typescript",
+    "type": "devDependencies",
+    "homepage": "https://www.typescriptlang.org/"
+  },
+  "zone.js": {
+    "current": "0.15.1",
+    "wanted": "0.15.1",
+    "latest": "0.16.3",
+    "dependent": "appli-test",
+    "location": "/projets/appli-test/node_modules/zone.js",
+    "type": "dependencies",
+    "homepage": "https://github.com/angular/angular#readme"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "mode": "majeure",
+  "vers": 20,
+  "branche": "maintenance/angular-20",
+  "depart": "master",
+  "commandes": [
+    {
+      "commande": "npx ng update @angular/core@20 @angular/cli@20",
+      "code": 0,
+      "extrait": "\n❯ Adds `BootstrapContext` to `bootstrapApplication` calls in `main.server.ts` to support server rendering.\n  Migration completed (No changes made).\n\n** Optional migrations of package '@angular/core' **\n\nThis package has 2 optional migrations that can be executed.\n❯ Converts the entire application to block control flow syntax.\n  ng update @angular/core --name control-flow-migration\n\n❯ Replaces usages of the deprecated Router.getCurrentNavigation method with the Router.currentNavigation signal.\n  ng update @angular/core --name router-current-navigation"
+    },
+    {
+      "commande": "npx ng update @angular/material@20 @ngrx/store@20.1.0 primeng@20.4.0",
+      "code": 0,
+      "extrait": "    \n      ✓  Updated Angular CDK to version 20\n    \n  Migration completed (No changes made).\n\n** Executing migrations of package '@angular/material' **\n\n❯ Updates Angular Material to v20.\n    \n      ✓  Updated Angular Material to version 20\n    \n  Migration completed (No changes made)."
+    }
+  ],
+  "verification": {
+    "ok": true,
+    "resultats": [
+      {
+        "etape": "lint",
+        "statut": "absente"
+      },
+      {
+        "etape": "test",
+        "commande": "npm run test:ci",
+        "statut": "ok",
+        "secondes": 16
+      },
+      {
+        "etape": "build",
+        "commande": "npm run build",
+        "statut": "ok",
+        "secondes": 6
+      }
+    ]
+  },
+  "commit": "ae305a9",
+  "journal": [
+    "npx ng update @angular/core@20 @angular/cli@20 : ok",
+    "npx ng update @angular/material@20 @ngrx/store@20.1.0 primeng@20.4.0 : ok",
+    "test : ok (16 s)",
+    "build : ok (6 s)"
+  ]
+}

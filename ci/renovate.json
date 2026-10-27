@@ -1,0 +1,30 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Préréglage Consigne DEV-603 : Renovate ouvre les demandes de fusion mineures une fois par mois ; les majeures d'Angular passent par ng update (outil ngm), jamais par Renovate.",
+  "extends": ["config:recommended"],
+  "timezone": "Europe/Paris",
+  "schedule": ["before 6am on the first day of the month"],
+  "labels": ["maintenance"],
+  "prConcurrentLimit": 3,
+  "dependencyDashboard": true,
+  "vulnerabilityAlerts": { "enabled": true, "schedule": ["at any time"], "labels": ["securite"] },
+  "packageRules": [
+    {
+      "description": "Angular et son outillage montent ensemble",
+      "matchPackageNames": ["/^@angular\\//", "/^@angular-devkit\\//", "@schematics/angular", "zone.js", "typescript"],
+      "groupName": "angular"
+    },
+    {
+      "description": "Les majeures d'Angular se font avec ng update (migrations de code), pas par Renovate",
+      "matchPackageNames": ["/^@angular\\//", "/^@angular-devkit\\//", "@schematics/angular", "zone.js", "typescript"],
+      "matchUpdateTypes": ["major"],
+      "enabled": false
+    },
+    {
+      "description": "Correctifs et mineures des autres paquets regroupés en une seule demande",
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchPackageNames": ["!/^@angular\\//", "!/^@angular-devkit\\//", "!zone.js", "!typescript"],
+      "groupName": "dependances mineures"
+    }
+  ]
+}

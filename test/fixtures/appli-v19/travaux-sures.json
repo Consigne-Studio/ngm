@@ -1,0 +1,47 @@
+{
+  "mode": "sures",
+  "branche": "maintenance/2026-10",
+  "depart": "master",
+  "appliquees": [
+    {
+      "name": "lodash",
+      "de": "4.17.15",
+      "vers": "4.18.1"
+    }
+  ],
+  "rejetees": [],
+  "auditFix": {
+    "avant": 36,
+    "apres": 35,
+    "code": 1
+  },
+  "verification": {
+    "ok": true,
+    "resultats": [
+      {
+        "etape": "lint",
+        "statut": "absente"
+      },
+      {
+        "etape": "test",
+        "commande": "npm run test:ci",
+        "statut": "ok",
+        "secondes": 17
+      },
+      {
+        "etape": "build",
+        "commande": "npm run build",
+        "statut": "ok",
+        "secondes": 6
+      }
+    ]
+  },
+  "commit": "dba3837",
+  "journal": [
+    "essai groupé : lodash",
+    "test : ok (21 s)",
+    "build : ok (8 s)",
+    "test : ok (17 s)",
+    "build : ok (6 s)"
+  ]
+}

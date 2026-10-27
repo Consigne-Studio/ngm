@@ -1,0 +1,44 @@
+# Diagnostic mensuel de maintenance Angular (offre Consigne DEV-603).
+# À copier dans .github/workflows/ du dépôt client. Lecture seule : il ne modifie ni le code ni les branches.
+# Chaque 1er du mois, il ouvre une issue « Maintenance Angular AAAA-MM » avec l'état du projet.
+name: Maintenance Angular
+
+on:
+  schedule:
+    - cron: '17 5 1 * *'
+  workflow_dispatch:
+
+env:
+  # Source de l'outil (dépôt public MIT). Seule ligne à changer si l'organisation GitHub porte un autre nom.
+  NGM: github:consigne/ngm#v1.0.0
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  diagnostic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - name: Diagnostic
+        run: npx --yes "$NGM" diagnostic --json etat.json --markdown resume.md
+      - uses: actions/upload-artifact@v4
+        with:
+          name: maintenance-angular
+          path: |
+            etat.json
+            resume.md
+      - name: Issue du mois
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          titre="Maintenance Angular $(date -u +%Y-%m)"
+          num=$(gh issue list --state open --search "\"$titre\" in:title" --json number --jq '.[0].number')
+          if [ -n "$num" ]; then gh issue comment "$num" --body-file resume.md; else gh issue create --title "$titre" --body-file resume.md; fi

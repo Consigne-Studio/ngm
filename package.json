@@ -1,0 +1,33 @@
+{
+  "name": "consigne-ngm",
+  "version": "1.0.0",
+  "description": "Maintenance mensuelle d'applications Angular : diagnostic, plan de montée de version, mises à jour vérifiées, rapport.",
+  "type": "module",
+  "bin": {
+    "ngm": "bin/ngm.mjs"
+  },
+  "engines": {
+    "node": ">=20.19"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  },
+  "license": "MIT",
+  "repository": "github:consigne/ngm",
+  "files": [
+    "bin",
+    "src",
+    "assets",
+    "ci",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "keywords": [
+    "angular",
+    "maintenance",
+    "ng-update",
+    "npm-audit",
+    "dependencies"
+  ]
+}

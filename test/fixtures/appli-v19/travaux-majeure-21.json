@@ -1,0 +1,40 @@
+{
+  "mode": "majeure",
+  "vers": 21,
+  "branche": "maintenance/angular-21",
+  "depart": "maintenance/angular-20",
+  "commandes": [
+    {
+      "commande": "npx ng update @angular/core@21 @angular/cli@21 @angular/material@21 @ngrx/store@21.1.1 primeng@21.1.10",
+      "code": 0,
+      "extrait": "  Migration completed (No changes made).\n\n** Optional migrations of package '@angular/core' **\n\nThis package has 1 optional migration that can be executed.\n❯ Replaces usages of the deprecated Router.getCurrentNavigation method with the Router.currentNavigation signal.\n  ng update @angular/core --name router-current-navigation\n\n** Executing migrations of package '@angular/material' **\n\n❯ Updates Angular Material to v21.\n  Migration completed (No changes made)."
+    }
+  ],
+  "verification": {
+    "ok": true,
+    "resultats": [
+      {
+        "etape": "lint",
+        "statut": "absente"
+      },
+      {
+        "etape": "test",
+        "commande": "npm run test:ci",
+        "statut": "ok",
+        "secondes": 15
+      },
+      {
+        "etape": "build",
+        "commande": "npm run build",
+        "statut": "ok",
+        "secondes": 6
+      }
+    ]
+  },
+  "commit": "9f1f2e9",
+  "journal": [
+    "npx ng update @angular/core@21 @angular/cli@21 @angular/material@21 @ngrx/store@21.1.1 primeng@21.1.10 : ok",
+    "test : ok (15 s)",
+    "build : ok (6 s)"
+  ]
+}
